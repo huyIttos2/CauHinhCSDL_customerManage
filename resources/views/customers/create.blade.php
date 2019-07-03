@@ -4,6 +4,13 @@
 @section('content')
     <form method="post" action="{{ route('customers.store') }}">
         @csrf
+        <div class="error-message">
+            @if(count($errors) > 0)
+                @foreach($errors -> all() as $error)
+                    <p style="color: red">{{$error}}</p>
+                @endforeach
+                @endif
+        </div>
       <div class="form-group">
         <label>NameCustomer</label>
         <input type="text" class="form-control" name="name" placeholder="Enter your name">

@@ -28,4 +28,5 @@ route::post('/create','CityController@create')->name('cities.create');
 Route::get('/{id}/edit','CityController@edit')->name('cities.edit');
 Route::get('/{id}/destroy','CityController@destroy')->name('cities.destroy');
 Route::get('/filter','CustomerController@filterByCity')->name('customers.filterByCity');
+    Route::get('/search','CustomerController@search')->name('customers.search');
 });
